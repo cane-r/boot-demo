@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.error{
+border:1px solid #f00;
+background-color:rgba(255,0,0,0.07);
+}
+.error-block{
+	color:#f00;
+}
+
+body{
+	padding-top:70px;
+}
+
+.alert{
+	text-align:center;
+}
+
+th,h2,tr{
+	text-align:center;
+}
+td{
+	width:50%;
+}
+
+.border{
+	
+	border-bottom:1px solid #000;
+	margin-bottom:10px;
+}

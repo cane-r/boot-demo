@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+
+<div th:replace="fragments/header">
+<title>Talks Schedule</title>
+</div>
+
+
+
+
+<body>
+
+<div class="container">
+<div class="alert alert-info">
+   This is scheduled talks
+</div>
+
+
+
+            
+ <div class="border" th:each="track : ${schedule}">
+<!--   <p th:text="${track.getCombinedMap()}"></p> -->
+  
+  
+  <table class="table table-striped">
+  <h2 th:text="${track.name}"></h2>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Name</th>
+       </tr>
+    </thead>
+    <tbody>
+      
+      <tr th:each="talk : ${track.getCombinedMap()}">
+    <td th:text="${talk.key}"></td>
+<!--     <td th:text="${talk.value.title}"></td> -->
+    <td><a th:text="${talk.value.title}" th:href="@{'/talk-list/'+${talk.value.id}}"></a></td>
+</tr>
+    
+  
+    
+</tr>
+    
+    
+     
+</tr>
+      
+      
+    </tbody>
+  </table>
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+</div>
+
+</body>
+</html>

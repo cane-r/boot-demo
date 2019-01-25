@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<div th:replace="fragments/header">
+<title>List entries here</title>
+
+</div>
+
+
+<body>
+
+
+<div class="container">
+   
+         <div class="alert alert-info">
+   This is all the records in the in-memory talks database
+</div>
+         
+         
+         <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Duration</th>
+       </tr>
+    </thead>
+    <tbody>
+      
+      <tr th:if="${talks.empty}">
+            <td colspan="3" style="text-align:center"> No Record Available </td>
+        </tr>
+      
+      <tr th:each="talk:${talks}">
+    <td th:text="${talk.id}" />
+     <td><a th:text="${talk.title}" th:href="@{'/talk-list/'+${talk.id}}"></a></td>
+     <td th:text="${talk.duration}" />
+</tr>
+      
+      
+    </tbody>
+  </table>
+    
+
+</div>
+
+</body>
+</html>

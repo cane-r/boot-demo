@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<div th:replace="fragments/header">
+<title>Specific Entry</title>
+
+</div>
+
+
+<body>
+
+
+<div class="container">
+   
+         <div class="alert alert-info">
+   This is the talk you have requested
+</div>
+         
+         
+         <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Duration</th>
+       </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+    <td th:text="${talk.id}" />
+    <td th:text="${talk.title}" />
+     <td th:text="${talk.duration}" />
+</tr>
+      
+      
+    </tbody>
+  </table>
+    
+
+</div>
+
+</body>
+</html>

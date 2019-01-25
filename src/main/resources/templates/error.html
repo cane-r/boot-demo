@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<div th:include="fragments/header">
+<title>Errors happens..</title>
+
+</div>
+
+<body>
+
+
+
+<div class="container">
+    
+    
+     <h4 th:text=${exception}>Exception:</h1>
+     <h4 th:text=${url}>Link you have clicked</h1>
+     <h2>Something we could not foresee has happened.Below you can see your options of where you can navigate</h1>
+     
+     
+     
+    <p><a href="#" th:href="@{/add}">Add entry</a></p>
+    <p><a href="#" th:href="@{/talk-list}">List entries</a></p>
+    <p><a href="#" th:href="@{/schedule}">View scheduled entries</a></p>
+
+</div>
+
+
+</body>
+</html>
